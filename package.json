@@ -22,7 +22,7 @@
     "check-eslint": "eslint --fix --ext .tsx src",
     "check-stylelint": "stylelint '**/*.less' --fix --custom-syntax postcss-less",
     "release": "standard-version",
-    "commit": "git add . && npm run lint && npm run check-eslint && npm run check-stylelint && git cz",
+    "commit": "npm run lint && npm run check-eslint && npm run check-stylelint && git add .  && git cz",
     "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
