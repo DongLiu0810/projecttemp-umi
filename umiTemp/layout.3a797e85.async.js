@@ -1,0 +1,1 @@
+(window["webpackJsonp_projectTemp"]=window["webpackJsonp_projectTemp"]||[]).push([[1],{"8yLC":function(e,c,n){"use strict";n.r(c);n("q1tI");var p=n("nKUr");c["default"]=e=>Object(p["jsx"])("div",{children:e.children})}}]);
