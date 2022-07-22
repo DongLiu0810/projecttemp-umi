@@ -25,9 +25,9 @@ export default defineConfig({
       wrappers: ['@/wrappers/auth'],
       routes: [
         {
-          path: '/home',
+          path: '/',
           component: '@/pages/home',
-          exact: true 
+          exact: true,
         },
       ],
     },
@@ -42,21 +42,6 @@ export default defineConfig({
       ? ['react', 'vendors', 'umi']
       : ['umi'],
   chainWebpack: function (config, { webpack }) {
-
-    //base64-font
-    config.module
-      .rule('ttf')
-      .test(/global.less$/)
-      .use('base64-font')
-      .loader(path.resolve('./base64-font'))
-      .options({
-        filePath: path.resolve(
-          __dirname,
-          './src/assets/font/Orbitron-Regular.ttf',
-        ),
-        replaceStr: /\.\/assets\/font\/Orbitron-Medium.ttf/g,
-      })
-      .end();
     if (process.env.NODE_ENV === 'production') {
       config.optimization.splitChunks({
         chunks: 'all',
