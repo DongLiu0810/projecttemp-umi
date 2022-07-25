@@ -31,9 +31,7 @@ request.interceptors.response.use(async (response) => {
 });
 
 request.interceptors.request.use((url, options) => {
-  const accessToken =
-    window.localStorage.getItem('hyperchainToken') ||
-    'abcdefghijklmnopqrstuvwxyz';
+  const accessToken = 'abcdefghijklmnopqrstuvwxyz';
   const headers = {
     ...options.headers,
     Authorization: `Bearer ${accessToken}`,

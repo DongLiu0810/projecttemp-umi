@@ -16,7 +16,6 @@ export const qiankun = {
     props.onGlobalStateChange((state, prevState) => {
       // state: 变更后的状态; prev 变更前的状态
       console.log(state);
-      localStorage.setItem('hyperchainToken', prevState.token);
     }, true);
 
     // props.setGlobalState();
