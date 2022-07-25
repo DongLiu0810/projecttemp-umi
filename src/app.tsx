@@ -15,7 +15,7 @@ export const qiankun = {
   async mount(props: { onGlobalStateChange: OnGlobalStateChange }) {
     props.onGlobalStateChange((state, prevState) => {
       // state: 变更后的状态; prev 变更前的状态
-      console.log(state);
+      console.log(state, prevState);
     }, true);
 
     // props.setGlobalState();
